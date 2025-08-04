@@ -1,0 +1,10 @@
+## Double Asterisk tells Portage to accept this package regardless of architecture
+## as Live Ebuilds are typically marked with KEYWORDS=""
+
+=dev-lang/python-3.13 ~arm64
+
+## Accept Keywords for Latest Rust
+=dev-lang/rust-bin-9999 **
+
+## Accept Keywords for Latest GoLang
+=dev-lang/go-9999 **

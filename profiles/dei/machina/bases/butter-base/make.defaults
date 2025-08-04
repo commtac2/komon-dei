@@ -1,0 +1,92 @@
+## Butter Base Portage Defaults
+
+## * Reference for GCC ARM Options: 
+##   * https://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html
+##   * https://gcc.gnu.org/onlinedocs/gcc/AArch64-Options.html
+
+## * Reference for Cortex A76 Specific:
+##   * https://developer.arm.com/documentation/100798/latest/
+##   * https://github.com/gcc-mirror/gcc/blob/master/gcc/config/arm/arm-cpus.in
+
+# * General
+## * Enable Link Time Optimation. 
+##   * LTO gives GCC the capability of dumping its GIMPLE to disk so that all the different
+##     compilation units that make up a single executable can be optimized as a single module.
+##   * Compilation Time Cost for Performance Increase. 
+## * Several Compilation bugs where mcpu gets copied in place of mtune, require us to be explicit about mtune.
+
+# * GCC Options
+## * We're going to use -mcpu=cortex-a76, -mtune=cortex-a76 which gives us a base of arm8.2-a+fp16+dotprod 
+## * Let's Be Explicit About:
+##   * +crypto - Yes Please. 
+##   * +rcpc - Cortex-a76 supports Arm 8.3 LDAPR Instructions so let's Include
+##   * +fp16 - Just to be Explicit over Implicit
+##   * +dotprod - Let us be Explicit about dotprod as the a76 includes the 8.4a DotProd Extension
+##   * +crc - Allow for hardware accelerated Cyclic Redundancy Checks. Few cons.
+##   * +sb - Put up Speculation Barriers. Some performance Decrease for security.
+##   * +predres - Enables instructions to prevent data prediction.
+
+KOMON_WARNING_FLAGS="-Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
+KOMON_DxM_FLAGS="-mcpu=cortex-a76+fp16+dotprod+crypto+rcpc+crc+sb+predres -mtune=cortex-a76 -O2 -pipe -flto ${KOMON_WARNING_FLAGS}"
+CFLAGS="${KOMON_DxM_FLAGS}"
+CXXFLAGS="${KOMON_DxM_FLAGS}"
+FCFLAGS="${KOMON_DxM_FLAGS}"
+FFLAGS="${KOMON_DxM_FLAGS}"
+
+## Include Komon Rust Flags
+RUSTFLAGS="${RUSTFLAGS} -C target-cpu=cortex-a76"
+
+## Include Komon GO Flags
+CGO_CFLAGS="${CFLAGS}"
+CGO_CXXFLAGS="${CXXFLAGS}"
+CGO_FFLAGS="${FFLAGS}"
+GOARM64=v8.2
+
+# WARNING: Changing your CHOST is not something that should be done lightly.
+# Please consult https://wiki.gentoo.org/wiki/Changing_the_CHOST_variable before changing.
+CHOST="aarch64-unknown-linux-gnu"
+
+# NOTE: This stage was built with the bindist USE flag enabled
+
+# This sets the language of build output to English.
+# Please keep this setting intact when reporting bugs.
+LC_MESSAGES=C.utf8
+
+## Keep It Conservative So That It Does Not Blow.
+MAKEOPTS="-j1 -l1"
+EMERGE_DEFAULT_OPTS="--jobs=1 --load-average=1"
+
+## Only Accept Free Software By Default
+ACCEPT_LICENSE="-* @FREE"
+
+## Let's make these USE Flags explicit.
+## +udev - Let's have udev
+## +verify_sig - Why not?
+## -telemetry - Why not?
+## +ssl - Let's Make Sure.
+## +pic - Yes to position Independant Code.
+## +device-mapper, +crypt. Needed for opening the drive at all via the initramfs
+## -io-uring: 
+##   "In June 2023, Google's security team reported that 60% of the exploits submitted to their bug bounty
+##    program in 2022 were exploits of the Linux kernel's io_uring vulnerabilities."
+## +smartcard - For Any Potential Keys.
+## +usb - Let's Be Explicit
+USE="${USE} udev verify-sig -telemetry ssl pic device-mapper crypt -io-uring smartcard usb"
+
+## USE EXPANDS
+
+## As determined by cpuid2cpuflags.
+CPU_FLAGS_ARM="edsp neon thumb vfp vfpv3 vfpv4 vfp-d32 aes sha1 sha2 crc32 asimddp v4 v5 v6 v7 v8 thumb2"
+
+## Just the VC4 and V3D for PI 5
+VIDEO_CARDS="vc4 v3d"
+
+## US I guess..
+L10N="en en-US"
+
+## Include Komon LLVM Flags
+LLVM_TARGETS="aarch64"
+
+## Include Komon Python Flags
+PYTHON_TARGETS="python3_12 python3_13 python3_13t"
+PYTHON_SINGLE_TARGET="python3_13"

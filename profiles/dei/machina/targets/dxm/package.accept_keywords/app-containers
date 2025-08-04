@@ -1,0 +1,3 @@
+app-containers/docker ~arm64
+app-containers/containerd ~arm64
+app-containers/runc ~arm64

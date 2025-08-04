@@ -1,0 +1,3 @@
+## GCC is always built with support for building other programs with LTO.
+## This USE Flag is for whether GCC Itself is built and optimized with LTO.
+sys-devel/gcc lto

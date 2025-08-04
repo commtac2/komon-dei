@@ -1,0 +1,2 @@
+## Minus ffmpeg at build time in order to avoid a circular dependency
+media-video/pipewire echo-cancel sound-server pipewire-alsa jack-client -ffmpeg

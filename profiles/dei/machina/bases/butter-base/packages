@@ -1,0 +1,55 @@
+## Pseudo Installation
+*app-admin/sudo
+*dev-libs/gobject-introspection
+*app-admin/sysklogd
+*app-shells/bash-completion
+*net-firewall/nftables
+*net-misc/dhcpcd
+*net-misc/netifrc
+*sys-process/cronie
+*sys-apps/mlocate
+*sys-kernel/dracut
+*sys-fs/cryptsetup
+*dev-vcs/git
+*app-editors/vim
+*app-editors/nano
+
+## Essential System Aides
+*app-misc/tmux
+*net-analyzer/tcpdump
+*sys-apps/gptfdisk
+*sys-process/htop
+*app-portage/eix
+*app-portage/gentoolkit
+*net-misc/wget
+*net-misc/curl
+*net-analyzer/nethogs
+*sys-block/parted
+*sys-process/iotop
+*sys-apps/firejail
+
+## QeysKellaya
+*app-admin/keepassxc
+*sys-apps/keyutils
+
+## File Systems
+*sys-fs/btrfs-progs
+*sys-fs/dosfstools
+*sys-fs/xfsprogs
+*sys-fs/exfatprogs
+
+*sys-block/io-scheduler-udev-rules
+
+## Wireguard
+*net-vpn/wireguard-tools
+
+## PC/SC Architecture smartcard middleware library
+*sys-apps/pcsc-lite
+*app-crypt/ccid
+
+## For FIDO2
+*net-misc/openssh
+*dev-libs/libfido2
+
+## Yubikey Manager
+*app-crypt/yubikey-manager

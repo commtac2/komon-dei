@@ -1,0 +1,6 @@
+## clippy - Install Clippy, Rust Code Linter
+## nightly - Enable Nightly Features
+## rust-analyzer - Install Rust Analyzer, a Rust compiler front-end for IDEs
+## rust-fmt - Install rustfmt, Rust code formatter
+## rust-src - Install rust-src, needed by developer tools and for build-std (cross)
+dev-lang/rust-bin clippy rust-analyzer rustfmt rust-src

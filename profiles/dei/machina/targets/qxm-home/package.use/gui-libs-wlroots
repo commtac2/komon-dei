@@ -1,0 +1,2 @@
+## Needs the x11-backend for X11 Applications running in XWayland 
+gui-libs/wlroots x11-backend

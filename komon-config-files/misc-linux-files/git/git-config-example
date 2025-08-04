@@ -1,0 +1,37 @@
+[user]
+    name = Emanuel Junior Acosta
+    email = emanuelacosta@komon.studio
+    # signingkey = ABC123
+[commit]
+    verbose = true
+    # gpgsign=true
+[help]
+    autocorrect = prompt
+[core]
+    editor = vim
+
+[push]
+    default = simple
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+[pull]
+    rebase = true
+[init]
+    defaultBranch = bass
+[branch]
+    sort = -committerdate
+    autoSetupRebase = always
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[column]
+    ui = auto
+[colors]
+    ui = auto
+[tag]
+    sort = version:refname
+

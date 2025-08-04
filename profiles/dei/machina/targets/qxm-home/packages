@@ -1,0 +1,91 @@
+## KDE 
+## %% KDE Educational Games
+*kde-apps/kdeedu-meta
+## %% KDE Desktop Games 
+*kde-apps/kdegames-meta
+
+## %% KDE Utilities
+## *  * Screen Magnifier
+*kde-apps/kmag
+## *  * Automatic Mouse Click
+*kde-apps/kmousetool
+## *  * Text to Speech Synthesizer FrontEnd 
+*kde-apps/kmouth
+## **   File Archiver by KDE
+*kde-apps/ark
+## *  * Hex Editor by KDE
+*app-editors/okteta
+## *  * Visualize Disk Usage with Interactive Map of Concentric, Segmented Rings
+*kde-apps/filelight
+## *  * KDE Pomodoro
+*app-misc/francis
+## **   KDE Backup App
+*kde-apps/kbackup
+## *  * Mi Amor Jean-Michel
+*kde-apps/kcharselect
+## *  * KDE Itenerary
+*kde-apps/kitinerary
+## *  * KDE One Time Password Client
+*app-crypt/keysmith
+## *  * File Finder Utility
+*kde-apps/kfind
+## *  * KDE MarkDown Editor
+*app-editors/ghostwriter
+## *  * Super Simple KDE Audio Recorder
+*media-sound/krecorder
+# Kate Editor
+*kde-apps/kate
+## ISO Image Writer
+*app-cdr/isoimagewriter
+## System Sweeper
+*kde-apps/sweeper
+
+## *  * Program that helps to learn and practice touch typing
+*kde-apps/ktouch
+## *  * KDE patience game
+*kde-apps/kpat
+## *  * KDE Kleopatra - Certificate manager and GUI for OpenPGP and CMS cryptography
+*kde-apps/kleopatra
+## *  * Kompare
+*kde-apps/kompare
+## **   KDE Alarm
+*kde-apps/kalarm
+## *  * KDE Timer
+*kde-apps/ktimer
+## *  * Tea Time
+*kde-apps/kteatime
+## *  * Ruler
+*kde-apps/kruler
+## *  * KDE Calculator
+*kde-apps/kcalc
+## *  * Im You
+*kde-apps/kreversi
+
+## Misc Essentials
+## %% ggggG V I M (shoes and misc)
+*app-editors/gvim
+## $$ LibreOffice for Productivity
+*app-office/libreoffice
+## $$ Web Browsers
+*www-client/firefox
+## $$ Open Source VS Code
+*app-editors/vscodium
+## $$ Gimp For Media Manipulation
+*media-gfx/gimp
+## It Plays Anything
+*media-video/vlc
+## I Play This
+*games-arcade/supertux
+
+## A few languages
+
+*dev-lang/python
+*dev-python/pip
+*dev-lang/go
+
+*dev-lang/rust-bin
+*net-libs/nodejs
+
+## Docker
+*app-containers/docker-cli
+*app-containers/docker

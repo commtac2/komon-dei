@@ -1,0 +1,2 @@
+console=tty1 root=UUID=76f517ba-f9df-4dab-9429-c053ceb79320 rootfstype=ext4 rootwait debug loglevel=7 cpufreq.default_governor=performance hardened_usercopy=1 init_on_alloc=1 init_on_free=1 randomize_kstack_offset=on page_alloc.shuffle=1 slab_nomerge mitigations=auto,nosmt iommu.passthrough=0 iommu.strict=1 kfence.sample_interval=100 lsm=landlock
+

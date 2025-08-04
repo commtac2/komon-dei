@@ -1,0 +1,4 @@
+## Accept All For KeePassXC
+app-admin/keepassxc **
+
+dev-libs/zxcvbn-c ~arm64

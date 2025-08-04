@@ -1,0 +1,2 @@
+## Have This Enabled for Yubikey FIDO
+dev-libs/libfido2 smartcard

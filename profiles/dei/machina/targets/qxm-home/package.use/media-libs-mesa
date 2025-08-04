@@ -1,0 +1,2 @@
+## lm-sensors: linux hardware sensor support for temp monitoring of GPU
+media-libs/mesa lm-sensors wayland

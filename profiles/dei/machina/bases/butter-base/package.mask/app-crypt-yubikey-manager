@@ -1,0 +1,3 @@
+## Mask Version 5.7.0 because as of 06/04/2025
+## It fails PGP Verification (Funny)
+=app-crypt/yubikey-manager-5.7.0

@@ -1,0 +1,19 @@
+## Install Plasma Meta along with related kde-apps
+*kde-plasma/plasma-meta
+## $$ Make absolutely sure we have wayland compositor (kwin)
+*kde-plasma/kwin
+
+## ## Administrative utilities, which help in managing the system.
+*kde-apps/kdeadmin-meta
+## $$ Basic applications such as file browser, editor, terminal emulator.
+*kde-apps/kdecore-meta
+
+## Let's Make These Packages Explicit
+*sys-auth/elogind
+*media-libs/mesa
+*gui-libs/wlroots
+*media-video/pipewire
+*media-video/ffmpeg
+
+## Let's Include FUSE FS for any AppImages
+*sys-fs/fuse

@@ -1,0 +1,4 @@
+## Turn off verify-sig for LibSoda Because
+## Otherwise a Circular Dependancy is Created Between
+## NaCl and MiniSign
+dev-libs/libsodium -verify-sig

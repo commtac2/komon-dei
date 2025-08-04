@@ -1,0 +1,15 @@
+## Let's make these USE Flags Explicit on top of the Butter Base Inheritance.
+## KDE Plasma
+  ## +kde : global USE Flag
+## QT5: Enable QT5 Global
+## QT6: Enable QT6
+## +elogind: Enable system wide elogind and disable other session trackers (systemd) to avoid conflicts
+## +wayland: Enable Global USE Flag 
+## +dbus for anything that needs it. 
+## Mesa - 
+  ## vulkan: Add Support for 3d graphics and computing via the Vulkan cross-platform API
+## Pipewire - 
+  ## Requires the pusleaudio use flag to be set globally if being used as a replacement to pulseaudio sound server.
+  ## gstreamer: Add support for media-libs/gstreamer
+## +ffmpeg: Explicit over Implicit
+USE="${USE} kde qt5 qt6 elogind -systemd wayland dbus vulkan pulseaudio gstreamer ffmpeg"

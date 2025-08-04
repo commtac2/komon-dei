@@ -1,0 +1,5 @@
+www-client/firefox ~arm64
+
+## FireFox 139 Needs:
+dev-libs/nss ~arm64
+dev-libs/nspr ~arm64

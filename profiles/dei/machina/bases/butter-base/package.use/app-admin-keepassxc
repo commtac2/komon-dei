@@ -1,0 +1,6 @@
+app-admin/keepassxc yubikey
+
+## Misc
+x11-libs/libxkbcommon X
+media-libs/libglvnd X
+sys-libs/zlib minizip

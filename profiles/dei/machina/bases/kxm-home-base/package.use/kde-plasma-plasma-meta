@@ -1,0 +1,8 @@
+## +pulseaudio : Install plasma applet for PulseAudio volume management
+## +wacom: For Fun
+## +qt5: Pull in required packages for seamless integration of KF5/QT5-based applications
+kde-plasma/plasma-meta pulseaudio wacom qt5
+
+# +input_devices_wacom - Okay
+kde-plasma/plasma-desktop input_devices_wacom
+

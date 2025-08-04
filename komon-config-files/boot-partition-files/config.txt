@@ -1,0 +1,80 @@
+[all]
+## BASE DTB TREE PARAMETERS
+
+## $$ Enable the Default Advanced Linux Sound Architecture (ALSA)
+dtparam=audio=on
+## $$ Make sure HDMI is on for Display unless Headless
+dtparam=hdmi=on
+## $$ Turn off Not Needed Communication Protocols
+dtparam=i2c_arm=off
+dtparam=i2s=off
+dtparam=spi=off
+## $$ No Need for UART
+dtparam=uart0=off
+## $$ Enable Hardware Random Number Generator
+dtparam=random=on
+## $$ Enable SD Card
+dtparam=sd=on
+## $$ Turn off Suspend to RAM.
+dtparam=suspend=off
+## $$ Turn on Watchdog timer.
+dtparam=watchdog=on
+## $$ Enable the Real Time Clock (Assuming Clock Battery Avaialble)
+dtparam=rtc=on
+## Charge the battery at a set voltage
+dtparam=rtc_bbat_vchg=3000000
+
+###################################################################################
+
+# This automatically loads overlays for detected cameras
+# We don't want any automatic overlay loading so turn off
+camera_auto_detect=0
+# Automatically load overlays for detected DSI displays
+display_auto_detect=1
+# Make the 3.3 V out from GPIO PWM. Why Not?
+power_force_3v3_pwm=1
+# Raspberry PI 5 3.5mm
+audio_pwm_mode=2
+
+# Don't have the firmware create an initial video= setting in cmdline.txt.
+# Use the kernel's default instead.
+disable_fw_kms_setup=1
+# Disable compensation for displays with overscan
+disable_overscan=1
+## Disable splash
+disable_splash=1
+
+###################################################################################
+
+## Kernel and Initramfs stuff
+# Force 64 Bit
+arm_64bit=1
+# Automatically load initramfs files, if found
+auto_initramfs=1
+# Select the kernel
+kernel=dxm-kernel
+initramfs initramfs-dxm followkernel
+
+## Clocking
+arm_freq=2700
+gpu_freq=1000
+## FOR NOW
+force_turbo=0
+
+######################################################################################
+
+## Overlays
+
+## %% ENABLE V3D
+dtoverlay=vc4-kms-v3d-pi5
+## $$ ## Related Parmeters
+max_framebuffers=2
+
+## %% DISABLE BLUETOOTH
+dtoverlay=disable-bt-pi5
+## %% DISABLE WIFI
+dtoverlay=disable-wifi-pi5
+## !! $$ Related Base Param
+## !! $$ This is needed for bluetooth
+dtparam=krnbt=off
+
