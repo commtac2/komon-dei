@@ -8,7 +8,6 @@ Stay Tuned to https://komon.studio
 Associated Installation Guide: https://github.com/commtac2/Manny-Manuals/blob/bass/dxm-from-scratch-guide/0-dxm-introduction-hello.md
 
 ## AutoExpanding Image
-Don't Exactly know Where to Host This, But Here's an AutoExpanding Image. 
 AutoExpansion Worked For Me. YMMV. 
 
 Download Link is Available Through Here:
