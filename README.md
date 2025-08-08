@@ -11,6 +11,8 @@ Associated Installation Guide: https://github.com/commtac2/Manny-Manuals/blob/ba
 Don't Exactly know Where to Host This, But Here's an AutoExpanding Image. 
 AutoExpansion Worked For Me. YMMV. 
 
+NOTE: Link Down, Gimmie a Minute
+
 ```
 https://drive.google.com/file/d/1qUX78SLwUriu6WQERjfsc7FJJP-m06ma/view?usp=drive_link
 ```
