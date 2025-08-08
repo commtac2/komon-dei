@@ -11,10 +11,10 @@ Associated Installation Guide: https://github.com/commtac2/Manny-Manuals/blob/ba
 Don't Exactly know Where to Host This, But Here's an AutoExpanding Image. 
 AutoExpansion Worked For Me. YMMV. 
 
-NOTE: Link Down, Gimmie a Minute
+Download Link is Available Through Here:
 
 ```
-https://drive.google.com/file/d/1qUX78SLwUriu6WQERjfsc7FJJP-m06ma/view?usp=drive_link
+https://komon.studio/komon-dei/introduction
 ```
 
 The SHA Should Be,
